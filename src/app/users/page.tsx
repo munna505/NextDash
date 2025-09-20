@@ -148,7 +148,7 @@ export default function UsersPage() {
                 </tr>
               </thead>
               <tbody className="bg-white dark:bg-gray-900 divide-y divide-gray-200 dark:divide-gray-700">
-                {users?.map((user, index) => (
+                {users?.map((user) => (
                   <motion.tr
                     key={user.id}
                     variants={itemVariants}
@@ -239,7 +239,7 @@ export default function UsersPage() {
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-gray-500 dark:text-gray-300 mb-1">Catch Phrase</label>
-                        <p className="text-gray-900 dark:text-white italic">"{selectedUser.company.catchPhrase}"</p>
+                        <p className="text-gray-900 dark:text-white italic">&ldquo;{selectedUser.company.catchPhrase}&rdquo;</p>
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-gray-500 dark:text-gray-300 mb-1">Business</label>

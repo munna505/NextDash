@@ -36,7 +36,7 @@ export function useFetch<T>(url: string, options?: RequestInit): UseFetchState<T
     if (url) {
       fetchData();
     }
-  }, [url, JSON.stringify(options)]);
+  }, [url, options]);
 
   return { data, loading, error };
 }

@@ -1,13 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useRouter } from 'next/navigation';
 import Card from '@/components/Card';
 import { useSession } from 'next-auth/react';
 
 export default function DashboardHome() {
   const { data: session } = useSession();
-  const router = useRouter();
 
   const stats = [
     { title: 'Total Posts', value: '100', change: '+12%', color: 'blue', bgColor: 'bg-blue-100', textColor: 'text-blue-600', changeColor: 'text-blue-600' },
@@ -75,7 +73,7 @@ export default function DashboardHome() {
         animate="visible"
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
       >
-        {stats.map((stat, index) => (
+        {stats.map((stat) => (
           <motion.div key={stat.title} variants={itemVariants}>
             <Card className="text-center">
               <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full ${stat.bgColor} ${stat.textColor} mb-4`}>

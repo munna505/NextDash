@@ -74,7 +74,7 @@ export default function PostsPage() {
         animate="visible"
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
       >
-        {posts?.slice(0, 12).map((post, index) => (
+        {posts?.slice(0, 12).map((post) => (
           <motion.div key={post.id} variants={itemVariants}>
             <Link href={`/posts/${post.id}`}>
               <Card hover className="h-full">
